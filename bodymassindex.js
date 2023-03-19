@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let isim = document.getElementById("isim");
         let kilo = document.getElementById("kilo");
         let boy = document.getElementById("boy");
-
+        let info = document.querySelector("#info");
         let kiloValue = parseFloat(kilo.value);
         let boyValue = parseFloat(boy.value) / 100;
         let vki = kiloValue / (boyValue * boyValue);
@@ -38,23 +38,28 @@ document.addEventListener("DOMContentLoaded", function () {
         if (vki > 0 && vki <= 19) {
             console.log(vki)
             alert(isim.value + " vücut kitle endeksiniz: " + vki.toFixed(2) + " zayıf!")
+            info.innerHTML = isim.value + " vücut kitle endeksiniz: " + vki.toFixed(2) + " zayıf!"
         }
         else if (vki > 19 && vki <= 25) {
             console.log(vki)
             alert(isim.value + " vücut kitle endeksiniz: " + vki.toFixed(2) + " normal! ")
+            info.innerHTML = isim.value + " vücut kitle endeksiniz: " + vki.toFixed(2) + " normal! "
         }
 
         else if (vki > 25 && vki <= 30) {
             console.log(vki)
             alert(isim.value + " vücut kitle endeksiniz: " + vki.toFixed(2) + " şişman! ")
+            info.innerHTML = isim.value + " vücut kitle endeksiniz: " + vki.toFixed(2) + " şişman! "
         }
         else if (vki > 30) {
             console.log(vki)
             alert(isim.value + " vücut kitle endeksiniz: " + vki.toFixed(2) + " obez! ")
+            info.innerHTML =isim.value + " vücut kitle endeksiniz: " + vki.toFixed(2) + " obez! "
         }
         else {
             console.log(vki)
             alert(isim.value + " vücut kitle endeksiniz hesaplanamadı. Tekrar giriniz!")
+            info.innerHTML = isim.value + " Vücut kitle endeksiniz hesaplanamadı. tekrar giriniz ! "
         }
 
     }
